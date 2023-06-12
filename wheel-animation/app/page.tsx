@@ -31,30 +31,30 @@ const App = () => {
                             </div>
 
                         </div>
-                        <div className='absolute w-full h-60 flex justify-center items-center  '>
-                            <div className='w-full'>
-                                <div className='flex justify-between rotate-45'>
+                        <div className='absolute w-60 h-60 flex  rotate-45 '>
+                            <div className='w-full flex flex-col'>
+                                <div className='flex justify-between '>
                                     <div>
-                                        <button>
-                                            <RiCameraLensLine />
+                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
+                                            <RiCameraLensLine className='text-white' size={20} />
                                         </button>
                                     </div>
 
                                     <div>
-                                        <button>
-                                            <AiOutlineSound />
+                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
+                                            <AiOutlineSound className='text-white' size={20}/>
                                         </button>
                                     </div>
                                 </div>
-                                <div className='flex justify-between'>
+                                <div className='flex justify-between mt-auto'>
                                     <div>
-                                        <button>
-                                            <BiCurrentLocation />
+                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
+                                            <BiCurrentLocation className='text-white' size={20} />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>
-                                            <MdOutlineWaterDrop />
+                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
+                                            <MdOutlineWaterDrop className='text-white' size={20}/>
                                         </button>
                                     </div>
 
@@ -65,7 +65,7 @@ const App = () => {
                     </div>
                 </div>
                 {/*blurred texts*/}
-                <div className='space-y-4 w-full bg-blue-800'>
+                <div className='space-y-4 w-full '>
                     <div className='flex space-x-2 text-sm'>
                     <span className='bg-gray-900 w-64 flex space-x-4 rounded-md p-2 text-white '>
                         <span className='flex justify-center items-center'>
