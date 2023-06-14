@@ -19,42 +19,47 @@ const App = () => {
 
     return (
         <>
-            <div className="flex items-center min-h-screen p-24 flex space-x-6 text-sm">
-                <div className='w-1/2  p-10'>
+            <div className="md:flex items-center h-screen md:p-24 pt-60 space-x-6 text-sm bg-gray-300 space-y-40">
+                <div className='w-full md:p-10  p-10'>
                     <div className="flex justify-center items-center relative">
                         <div className='absolute'>
                             <div className="relative">
-                                <div className="w-80 h-80 bg-gray-300 rounded-full">
-
+                                <div className="w-80 h-80 bg-gray-500 rounded-full">
                                 </div>
                                 <div className="absolute inset-10 w-60 h-60 bg-white rounded-full"></div>
                             </div>
 
                         </div>
-                        <div className='absolute w-60 h-60 flex  rotate-45 '>
+                        <div className='absolute w-72 h-72 flex  rotate-45  '>
                             <div className='w-full flex flex-col'>
                                 <div className='flex justify-between '>
-                                    <div>
-                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
-                                            <RiCameraLensLine className='text-white' size={20} />
+                                    <div className='flex space-x-4 -rotate-45 '>
+                                        <button className=' bg-gray-800 rounded-full p-8 space-x-4'>
+                                                <FiCamera className='text-white' size={30} />
                                         </button>
                                     </div>
 
                                     <div>
-                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
-                                            <AiOutlineSound className='text-white' size={20}/>
+                                        <button className='-rotate-45 flex items-center space-x-4'>
+                                            <div className='bg-gray-800 rounded-full p-8'>
+                                                <AiOutlineSound className='text-white' size={30} />
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
                                 <div className='flex justify-between mt-auto'>
                                     <div>
-                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
-                                            <BiCurrentLocation className='text-white' size={20} />
+                                        <button className='-rotate-45 flex space-x-4'>
+                                            <div className='bg-gray-800 rounded-full p-8'>
+                                                <BiCurrentLocation className='text-white' size={30} />
+                                            </div>
                                         </button>
                                     </div>
                                     <div>
-                                        <button className='-rotate-45 bg-gray-800 rounded-full p-6'>
-                                            <MdOutlineWaterDrop className='text-white' size={20}/>
+                                        <button className='-rotate-45 flex space-x-4'>
+                                            <div className='bg-gray-800 rounded-full p-8'>
+                                                <MdOutlineWaterDrop className='text-white' size={30} />
+                                            </div>
                                         </button>
                                     </div>
 
@@ -65,7 +70,7 @@ const App = () => {
                     </div>
                 </div>
                 {/*blurred texts*/}
-                <div className='space-y-4 w-full '>
+                <div className='space-y-4 w-full md:pt-0'>
                     <div className='flex space-x-2 text-sm'>
                     <span className='bg-gray-900 w-64 flex space-x-4 rounded-md p-2 text-white '>
                         <span className='flex justify-center items-center'>
