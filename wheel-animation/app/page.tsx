@@ -1,4 +1,5 @@
 'use client'
+import {useState} from "react";
 import { FiCamera } from 'react-icons/fi';
 import { BiVolumeMute, BiCurrentLocation } from 'react-icons/bi';
 import { MdOutlineWaterDrop } from 'react-icons/md';
@@ -7,6 +8,13 @@ import{AiOutlineSound} from 'react-icons/ai';
 import { motion } from 'framer-motion'
 
 const App = () => {
+    const [rotate, setRotate] = useState(0);
+
+    const handleButtonClick = () => {
+        const newAngle = rotate + 45; // Rotate by 360 degrees
+        setRotate(newAngle);
+    };
+
 
     const wheelVariants = {
         hidden: { rotate: 0 },
@@ -26,21 +34,29 @@ const App = () => {
                             <div className="relative">
                                 <div className="w-80 h-80 bg-gray-500 rounded-full">
                                 </div>
-                                <div className="absolute inset-10 w-60 h-60 bg-white rounded-full"></div>
+                                <div className="absolute inset-10 w-60 h-60 bg-white rounded-full"
+                                     style={{ transform: `rotate(${rotate}deg)` }}
+                                ></div>
                             </div>
 
                         </div>
-                        <div className='absolute w-72 h-72 flex  rotate-45  '>
+                        <div className='absolute w-72 h-72 flex  rotate-45'
+                             style={{ transform: `rotate(${rotate}deg)` }}
+                        >
                             <div className='w-full flex flex-col'>
                                 <div className='flex justify-between '>
                                     <div className='flex space-x-4 -rotate-45 '>
-                                        <button className=' bg-gray-800 rounded-full p-8 space-x-4'>
+                                        <button className=' bg-gray-800 rounded-full p-8 space-x-4'
+                                                onClick={handleButtonClick}
+                                        >
                                                 <FiCamera className='text-white' size={30} />
                                         </button>
                                     </div>
 
                                     <div>
-                                        <button className='-rotate-45 flex items-center space-x-4'>
+                                        <button className='-rotate-45 flex items-center space-x-4'
+                                                onClick={handleButtonClick}
+                                        >
                                             <div className='bg-gray-800 rounded-full p-8'>
                                                 <AiOutlineSound className='text-white' size={30} />
                                             </div>
@@ -49,14 +65,18 @@ const App = () => {
                                 </div>
                                 <div className='flex justify-between mt-auto'>
                                     <div>
-                                        <button className='-rotate-45 flex space-x-4'>
+                                        <button className='-rotate-45 flex space-x-4'
+                                                onClick={handleButtonClick}
+                                        >
                                             <div className='bg-gray-800 rounded-full p-8'>
                                                 <BiCurrentLocation className='text-white' size={30} />
                                             </div>
                                         </button>
                                     </div>
                                     <div>
-                                        <button className='-rotate-45 flex space-x-4'>
+                                        <button className='-rotate-45 flex space-x-4'
+                                                onClick={handleButtonClick}
+                                        >
                                             <div className='bg-gray-800 rounded-full p-8'>
                                                 <MdOutlineWaterDrop className='text-white' size={30} />
                                             </div>
