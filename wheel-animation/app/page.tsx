@@ -9,20 +9,11 @@ import { motion } from 'framer-motion';
 
 const App = () => {
     const [rotate, setRotate] = useState(45);
-
     const handleButtonClick = () => {
         const newAngle = rotate + 90; // Rotate by 90 degrees
-        setRotate(newAngle);
-    };
-
-    const wheelVariants = {
-        hidden: { rotate: 0 },
-        visible: { rotate: -405 },
-    };
-
-    const buttonVariants = {
-        hover: { scale: 1.1 },
-    };
+         setRotate(newAngle >= 360 ? 45 : newAngle); };
+    const wheelVariants = { hidden: { rotate: 0 }, visible: { rotate }, };
+    const buttonVariants = { hover: { scale: 1.1 }, };
 
     return (
         <>
@@ -38,8 +29,7 @@ const App = () => {
                         <div
                             className="absolute w-72 h-72 flex"
                         >
-                            <div
-                            className={`w-full flex flex-col  ${rotate === 45 ? '' : 'animate-spin-slow'}`}
+                            <div className="w-full flex flex-col "
                                  style={{ transform: `rotate(${rotate}deg)` }}
                             >
                                 <div className="flex justify-between ">
